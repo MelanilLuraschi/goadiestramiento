@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* TESTIMONIOS */
+.cajaTestimonio {
+  padding: 1rem 5rem;
+  display: flex;
+  width: 100%;
+
+  align-items: center;
+  height: 250px;
+}
+.imagenTestimonio {
+  background-color: brown;
+  /* background-image: url(tip1.jpg); */
+  overflow: hidden;
+  width: 50%;
+  height: 100%;
+}
+.imagenTestimonio img {
+  width: 100%;
+  height: auto;
+}
+.textoTestimonio {
+  width: 50%;
+  text-align: center;
+  padding: 1em;
+  font-size: 1.5vw;
+  color: rgb(95, 63, 40);
+}
+
+/* para que la imagen se adapte al div */
+@supports (object-fit: cover) {
+  .imagenTestimonio img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+}
+
+/* responsive testimonios */
+@media (min-width: 1200px) {
+  .textoTestimonio {
+    font-size: 1.3vw;
+  }
+}
+@media (max-width: 900px) {
+  .textoTestimonio {
+    font-size: 1.7vw;
+  }
+}
+@media (max-width: 650px) {
+  .cajaTestimonio {
+    flex-direction: column;
+    height: 400px;
+    padding: 1em 2.5em;
+    align-items: center;
+  }
+  .imagenTestimonio {
+    height: 250px;
+    width: auto;
+  }
+  .textoTestimonio {
+    font-size: 3vw;
+    width: 100%;
+
+    align-items: center;
+  }
+}
+/* termina el responsive testimonios */
